@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,100;1,300&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./background.avif');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 2rem;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.logo {
+    color: #FFFFFF;
+    font-size: 1.75rem;   
+}
+
+.nav-links {
+    display: flex;
+}
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 0.625rem 1.25rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #FFFFFF;
+    padding: 7px;
+    width: 100px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+
+nav ul li a:hover {
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+button {
+    text-align: center;
+    background-color: #FFFFFF;
+    padding: 7px;
+    width: 100px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+
+.show {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    right: 30%;
+    top: 100;
+    padding: 2rem 0.5rem;
+}
+
+.fa-bars {
+    display: none;
+    font-size: 30px;
+    color: #FFFFFF;
+}
+
+.show li {
+    display: block;
+    padding: 1rem;
+}
+
+@media screen and (max-width: 992px) {
+    .nav-links, .btn {
+        display: none;
+    }
+    .fa-bars {
+        display: block;
+        cursor: pointer;
+    }
+
+    .show {
+        display: flex;
+    }
+}
